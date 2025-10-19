@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livestock Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <i class="animal-icon fas fa-cow"></i>
+    <i class="animal-icon fas fa-pig"></i>
+    <i class="animal-icon fas fa-sheep"></i>
+    <i class="animal-icon fas fa-hen"></i>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Livestock Analytics Dashboard</h1>
+        </header>
+
+        <div class="dashboard-header">
+            <div class="controls">
+                <button class="btn" id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh Data</button>
+                <button class="btn" id="export-btn"><i class="fas fa-download"></i> Export Report</button>
+            </div>
+            <div class="last-updated" id="last-updated">Last updated: <span id="update-time">Just now</span></div>
+        </div>
+
+        <main>
+            <section class="metrics">
+                <div class="metric-card">
+                    <i class="fas fa-users"></i>
+                    <h2>Total Users</h2>
+                    <p id="total-users">0</p>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> <span id="user-trend">12%</span> from last week</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-camera"></i>
+                    <h2>Total Animal Uploads</h2>
+                    <p id="total-uploads">0</p>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> <span id="upload-trend">8%</span> from last week</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-comments"></i>
+                    <h2>Total Chat Queries</h2>
+                    <p id="total-queries">0</p>
+                    <div class="trend"><i class="fas fa-arrow-up"></i> <span id="query-trend">15%</span> from last week</div>
+                </div>
+                <div class="metric-card">
+                    <i class="fas fa-cow"></i>
+                    <h2>Most Identified Breed</h2>
+                    <p id="most-identified-breed">N/A</p>
+                    <div class="trend"><i class="fas fa-check-circle"></i> <span id="breed-count">0</span> identifications</div>
+                </div>
+            </section>
+
+            <section class="charts">
+                <div class="chart-card">
+                    <h3><i class="fas fa-bars"></i> Breed Identifications (Top 10)</h3>
+                    <div class="chart-container">
+                        <canvas id="breedUploadsChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3><i class="fas fa-chart-pie"></i> Animal Types Uploaded</h3>
+                    <div class="chart-container">
+                        <canvas id="animalTypesChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card large">
+                    <h3><i class="fas fa-chart-line"></i> Interactions & Uploads Over Time</h3>
+                    <div class="chart-container">
+                        <canvas id="activityOverTimeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3><i class="fas fa-map-marked-alt"></i> Regional Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="regionalChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3><i class="fas fa-calendar"></i> Weekly Activity</h3>
+                    <div class="chart-container">
+                        <canvas id="weeklyActivityChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Livestock Analytics Dashboard &copy; 2023 | Powered by Advanced AI Breed Recognition</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

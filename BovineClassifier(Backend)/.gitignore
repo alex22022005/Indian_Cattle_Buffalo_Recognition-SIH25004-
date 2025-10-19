@@ -1,0 +1,11 @@
+# Environment variables
+.env
+
+# Python virtual environment
+.venv/
+
+# Node.js dependencies
+node_modules/
+
+# VS Code editor folder
+.vscode/
