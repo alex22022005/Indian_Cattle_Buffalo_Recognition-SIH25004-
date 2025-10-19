@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buffalo & Cattle Breed Recognition</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ================== Landing Page ================== -->
+    <div class="container">
+      <header id="app-title">Buffalo & Cattle Breed Recognition</header>
+
+      <!-- Hero Section -->
+      <div class="section">
+        <h1 id="hero-title" style="font-size: 36px; margin-bottom: 15px">
+          AI-Powered Breed Identification System
+        </h1>
+        <p
+          id="hero-desc"
+          style="font-size: 18px; color: #555; max-width: 800px; margin: auto"
+        >
+          Quickly and accurately identify the breeds of Indian cattle and
+          buffaloes using images. Keep track of breed history, measurements,
+          productivity, and other essential data for effective farm management
+          and research.
+        </p>
+      </div>
+
+      <!-- Quick Highlights / Features -->
+      <div class="section">
+        <div class="cards">
+          <div class="card">
+            <h3 id="feature1-title">✅ Accurate & Fast</h3>
+            <p id="feature1-desc">
+              AI-powered image recognition ensures reliable breed identification
+              in seconds.
+            </p>
+          </div>
+          <div class="card">
+            <h3 id="feature2-title">📊 Historical Tracking</h3>
+            <p id="feature2-desc">
+              Maintain a complete history of animal uploads including
+              measurements and productivity.
+            </p>
+          </div>
+          <div class="card">
+            <h3 id="feature3-title">🔒 Privacy & Control</h3>
+            <p id="feature3-desc">
+              Clear your upload history anytime to ensure your data is secure.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language Selection -->
+      <div class="section">
+        <h3>Select Language / भाषा चुनें / மொழியைத் தேர்ந்தெடுக்கவும்</h3>
+        <select
+          class="language-selector"
+          id="languageSelect"
+          onchange="changeLanguage()"
+        >
+          <option value="en">English</option>
+          <option value="ta">Tamil</option>
+          <option value="hi">Hindi</option>
+          <option value="ml">Malayalam</option>
+        </select>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="section">
+        <button
+          id="get-started-btn"
+          class="btn"
+          onclick="startApp()"
+          style="font-size: 20px; padding: 15px 40px"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <script src="home-script.js"></script>
+  </body>
+</html>
